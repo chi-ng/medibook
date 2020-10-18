@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <title> Book An Appointment </title>
+        <link rel="stylesheet" type="text/css" href="homepage.css"> 
+        <!-- navigation menu template-->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- jquery link files-->
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="/resources/demos/style.css">
+        <link rel="stylesheet" href="jquery-timepicker/jquery.timepicker.min.css">
+        <link rel="stylesheet" href="jquery.timepicker.css">
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        
+        <!-- jQuery timepicker library -->
+        <script src="jquery-timepicker/jquery.timepicker.min.js"></script>
+        <script src="jquery.timepicker.js"> </script>
+        <script src="booking.js"></script>
+        
+    
+    </header>
+
+
+    <body>  
+        <div class="container">
+            <div class="box-screen">
+                <!-- logo -->
+                <div class="logo"> 
+                    <a href="homepage.html"> <img src="logo.png"> </a>
+                </div>
+                
+
+                <!--navigation menu -->
+                <div class="w3-bar w3-light-grey">
+                    <a href="homepage.html" class="w3-bar-item w3-button"> Home </a>
+                    <a href="logout.php" class="w3-bar-item w3-button" style="float: right"> Log out </a>
+                </div>
+            </div>
+<br>
+            <!-- patient's dashboard -->
+            <div class="body">
+                <h1> Book an appointment </h1>
+
+                <!-- create a form -->
+                <form class="booking-form" action="booking.php" method="POST">
+                <!-- select types of appointment-->
+                    <label> Types of appointment </label>
+                        <select name="types-of-appointment">
+                            <option value="Check up"> Check-up </option>
+                            <option value="Blood test "> Blood test </option>
+                            <option value="Prescriptions for medicines"> Prescriptions for medicines </option>
+                            <option value="Advice on health problems"> Advice on health problems </option>
+                            <option value="Examinations and treatment "> Examinations and treatment </option>
+                            <option value="Other health services "> Other health services </option>
+                        </select>
+                
+    <hr>
+
+                <!-- select the date -->
+                    <label> Arrival date </label>
+                        <input type="text" id="calendar" name="arrival-date" placeholder="select arrival date" required> 
+                    
+    <hr>
+                  
+                
+                <!-- select the time -->
+                <label> Available doctors and times </label> <br> <br>
+                    <input type="radio" name="select-doctor" value="Dr. Anna Glinka"> Dr. Anna Glinka (F)
+                        <p>Time: <input name="select_time_anna" type="text" id="time1" placeholder="select time" > </p>
+
+                    <input type="radio" name="select-doctor" value="Dr. Mike Hall"> Dr. Mike Hall (M)
+                        <p>Time: <input name="select_time_mike" type="text" id="time2" placeholder="select time" > </p>
+
+                    <input type="radio" name="select-doctor" value="Dr. Joshua Walsh"> Dr. Joshua Walsh (M)
+                        <p>Time: <input name="select_time_joshua" type="text" id="time3" placeholder="select time" > </p>
+                    <br> 
+                    
+
+                    
+
+        <hr>
+                
+                <!-- comment reasoning -->
+                <label> Appoinment reason (optional)  </label> <br>
+                      <textarea rows="4" cols="50" name="comment" form="usrform">  </textarea>
+        <hr>
+                <button type="submit" name="submit" style="background-color: #CAE8F0"> Submit </button>
+
+
+
+
+            </form> <!-- form ending -->
+        </div>
+        
+          
+    </body>
+
+
+
+
+    <footer>
+
+
+    </footer>
+</html> 

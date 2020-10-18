@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <title> Manage appointment </title>
+        <meta charset="windows-1252">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="homepage.css">
+        <!-- navigation menu template-->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <style>
+          #manage-table {
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          #manage-table th {
+            border: 2px solid #ddd;
+            padding: 7px; }
+
+          #manage-table tr {
+            padding: 7px;
+          }
+
+          #manage-table tr:nth-child(even){background-color: #f2f2f2;}
+
+          #manage-table tr:hover {background-color: #ddd;}
+
+          #manage-table th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #CAE8F0;
+            color: black;
+          }
+        </style>
+
+    </header>
+
+
+    <body>
+        <div class="container">
+            <div class="box-screen">
+                <!-- logo -->
+                <div class="logo">
+                    <a href="homepage.html"> <img src="logo.png"> </a>
+                </div>
+
+
+                <!--navigation menu -->
+                <div class="w3-bar w3-light-grey">
+                    <a href="homepage.html" class="w3-bar-item w3-button"> Home </a>
+                    <a href="logout.php" class="w3-bar-item w3-button" style="float: right"> Log out </a>
+                </div>
+            </div>
+<br>
+            <!-- manage booking info -->
+            <div class="body">
+                <h1> Manage appointment </h1>
+
+                <!-- manage booking table -->
+                <table id="manage-table">
+                        <tr>
+                          <th>Type of appointment</th>
+                          <th>Arrival date</th>
+                          <th>Available doctor</th>
+                          <th>Time slots</th>
+                          <th>Appointment reason </th>
+                          <th> Change appointment </th>
+                          <th> Cancel appointment </th>
+                        </tr>
+                        <tr>
+                          <td> Check up </td>
+                          <td> Monday 14-03-2019 </td>
+                          <td> Dr Mike Hall </td>
+                          <td> 9:00am </td>
+                          <td> none </td>
+                          <td style='cursor: pointer; text-decoration: underline;'> Change </td>
+                          <td style='cursor: pointer; text-decoration: underline;'> Cancel </td>
+
+
+                        </tr>
+                        <tr>
+                          <td> Check up </td>
+                          <td> Monday 14-03-2019 </td>
+                          <td> Dr Joshua Walsh </td>
+                          <td> 9:00am </td>
+                          <td> none </td>
+                          <td style='cursor: pointer; text-decoration: underline;'> Change </td>
+                          <td style='cursor: pointer; text-decoration: underline;'> Cancel </td>
+                        </tr>
+                        <tr>
+                          <td> Check up </td>
+                          <td> Monday 14-03-2019 </td>
+                          <td> Dr Anna Glinka </td>
+                          <td> 9:00am </td>
+                          <td> none </td>
+                          <td style='cursor: pointer; text-decoration: underline;'> Change </td>
+                          <td style='cursor: pointer; text-decoration: underline;'> Cancel </td>
+                        </tr>
+
+                      </table>
+            </div>
+        </div>
+
+        <script>
+                var index, table = document.getElementById('manage-table');
+                for(var i = 1; i < table.rows.length; i++)
+                {
+                    table.rows[i].cells[6].onclick = function()
+                    {
+                        var c = confirm("Do you want to cancel this appointment?");
+                        if(c === true)
+                        {
+                            index = this.parentElement.rowIndex;
+                            table.deleteRow(index);
+                        }
+
+                        //console.log(index);
+                    };
+
+                    table.rows[i].cells[5].onclick = function()
+                    {
+                        var c = confirm("Do you want to change this appointment?");
+                        if(c === true)
+                        {
+                            index = this.parentElement.rowIndex;
+                            table.deleteRow(index);
+                            window.location="booking.html";
+                        }
+
+                        //console.log(index);
+                    };
+
+                }
+            </script>
+
+
+
+    </body>
+
+
+
+
+    <footer>
+
+
+    </footer>
+</html>

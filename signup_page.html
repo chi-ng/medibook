@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<header>
+    <title> Create An Account </title>
+    <link rel="stylesheet" type="text/css" href="login_page.css">
+</header>
+
+
+<body>  
+        <div class="login">
+            <div class="login-screen">
+                <div class="txtcontainer">
+                    <div class="logo"> 
+                        <img src="logo.png">
+                    </div>
+                    <h1> Create An Account </h1> 
+                </div>
+                
+                <!--create a form -->
+                <form class="form" action="form.php" method="POST" id="signup-form">
+                        <div class="login-form">
+                            <div class="control-group">
+                                <input type="text" placeholder="First name" required>
+                            </div>
+
+                            <div class="control-group">
+                                <input type="text" placeholder="Last name" required>
+                            </div>
+
+                            <div class="control-group">
+                                    <input type="text" placeholder="Address" required>
+                            </div>
+
+                            <div class="control-group">
+                                <input type="text" placeholder="Post code" required >
+                            </div>
+
+                            <div class="control-group">
+                                <select class="combo-box" form="signup-form" required>
+                                    <option value=""> Select city </option>
+                                    <option value="london"> London </option>
+                                    <option value="bir"> Birmingham </option>
+                                    <option value="glas"> Glasgow </option>
+                                    <option value="liv"> Liverpool </option>
+                                    <option value="bris"> Bristol </option>
+                                    <option value="man"> Manchester </option>
+                                    <option value="leeds"> Leeds </option>
+                                    <option value="edin"> Edinburgh </option>
+                                    <option value="lei"> Leicester </option>
+                                </select>
+                                <label style="font-size:14px; color: #444">United Kingdom </label>
+                            </div>
+
+                            <div class="control-group">
+                                <input type="email" placeholder="Email" required>
+                            </div>
+    
+                            <div class="control-group">
+                                <input type="password" placeholder="New password" required>
+                            </div>
+    
+                            <div class="control-group">
+                                <input class="btn" type="submit" value="Submit">
+                                <a class="login-link" href="login_page.html"> Back to Log in </a>
+                            </div>
+                        </div>
+                    </form>
+            </div>
+        </div>
+        
+                
+             
+    </body>
+
+
+
+
+<footer>
+        
+
+</footer>
+</html> 

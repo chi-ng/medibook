@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <title> Manage appointment </title>
+        <meta charset="windows-1252">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="homepage.css">
+        <!-- navigation menu template-->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <style>
+          #meds {
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          #meds th {
+            border: 2px solid #ddd;
+            padding: 7px; }
+
+          #meds tr {
+            padding: 7px;
+          }
+
+          #meds tr:nth-child(even){background-color: #f2f2f2;}
+
+          #meds tr:hover {background-color: #ddd;}
+
+          #meds th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #CAE8F0;
+            color: black;
+          }
+        </style>
+
+    </header>
+
+
+    <body>
+        <div class="container">
+            <div class="box-screen">
+                <!-- logo -->
+                <div class="logo">
+                    <a href="homepage.html"> <img src="logo.png"> </a>
+                </div>
+
+
+                <!--navigation menu -->
+                <div class="w3-bar w3-light-grey">
+                    <a href="homepage.html" class="w3-bar-item w3-button"> Home </a>
+                    <a href="logout.php" class="w3-bar-item w3-button" style="float: right"> Log out </a>
+                </div>
+            </div>
+<br>
+            <!-- manage booking info -->
+            <div class="body">
+                <h1> Manage appointment </h1>
+
+                <!-- manage booking table -->
+                <table id="meds">
+                        <tr>
+                          <th>Prescription ID</th>
+                          <th>Medicine</th>
+                          <th>Confirm</th>
+                        </tr>
+                        <tr>
+                          <td> 24023 </td>
+                          <td> Paracetamol </td>
+                          <td style='cursor: pointer; text-decoration: underline;'> Ok </td>
+                        </tr>
+                        <tr>
+                          <td> 45424</td>
+                          <td> Ibuprofen </td>
+                          <td style='cursor: pointer; text-decoration: underline;'> Ok </td>
+                        </tr>
+                        <tr>
+                          <td> 85858 </td>
+                          <td> Paracetamol </td>
+                          <td style='cursor: pointer; text-decoration: underline;'> Ok </td>
+                        </tr>
+                      </table>
+            </div>
+        </div>
+
+        <script>
+                var index, table = document.getElementById('meds');
+                for(var i = 1; i < table.rows.length; i++)
+                {
+                    table.rows[i].cells[2].onclick = function()
+                    {
+                        var c = confirm("Do you want to repeat this Prescription?");
+                        if(c === true)
+                        {
+                            var q = alert("The doctor just needs to okay that")
+                            if (q == true);
+                            {
+                              window.location="homepage.html";
+                            }
+                        }
+                    };
+
+                }
+            </script>
+
+
+
+    </body>
+
+
+
+
+    <footer>
+
+
+    </footer>
+</html>

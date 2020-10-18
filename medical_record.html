@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <title> Manage appointment </title>
+        <meta charset="windows-1252">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="homepage.css">
+        <!-- navigation menu template-->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+        <style>
+          #med-histroy {
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          #med-histroy th {
+            border: 2px solid #ddd;
+            padding: 7px; }
+
+          #med-histroy tr {
+            padding: 7px;
+          }
+
+          #med-histroy tr:nth-child(even){background-color: #f2f2f2;}
+
+          #med-histroy tr:hover {background-color: #ddd;}
+
+          #med-histroy th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #CAE8F0;
+            color: black;
+          }
+        </style>
+    </header>
+
+
+    <body>
+        <div class="container">
+            <div class="box-screen">
+                <!-- logo -->
+                <div class="logo">
+                    <a href="homepage.html"> <img src="logo.png"> </a>
+                </div>
+
+
+                <!--navigation menu -->
+                <div class="w3-bar w3-light-grey">
+                    <a href="homepage.html" class="w3-bar-item w3-button"> Home </a>
+                    <a href="logout.php" class="w3-bar-item w3-button" style="float: right"> Log out </a>
+                </div>
+            </div>
+<br>
+            <!-- Medical Record info -->
+            <div class="body">
+                <h1> Medical Record </h1>
+
+                <table id="med-histroy">
+                        <tr>
+                          <th>Date</th>
+                          <th>Doctor</th>
+                          <th>Diagnosis</th>
+                        </tr>
+                        <tr>
+                          <td> Monday 14-03-2019</td>
+                          <td> Dr Anna Glinka</td>
+                          <td> Back Pain</td>
+                        </tr>
+                        <tr>
+                          <td> Monday 23-03-2019 </td>
+                          <td> Dr Mike Hall</td>
+                          <td> Stomach ache</td>
+                        </tr>
+                      </table>
+            </div>
+        </div>
+
+        <script>
+                var index, table = document.getElementById('manage-table');
+                for(var i = 1; i < table.rows.length; i++)
+                {
+                    table.rows[i].cells[6].onclick = function()
+                    {
+                        var c = confirm("Do you want to cancel this appointment?");
+                        if(c === true)
+                        {
+                            index = this.parentElement.rowIndex;
+                            table.deleteRow(index);
+                        }
+
+                        //console.log(index);
+                    };
+
+                    table.rows[i].cells[5].onclick = function()
+                    {
+                        var c = confirm("Once you click OK, this appointment will be deleted. Are you sure? ");
+                        if(c === true)
+                        {
+                            index = this.parentElement.rowIndex;
+                            table.deleteRow(index);
+                            window.location="booking.html";
+                        }
+
+                        //console.log(index);
+                    };
+
+                }
+            </script>
+
+
+
+    </body>
+
+
+
+
+    <footer>
+
+
+    </footer>
+</html>

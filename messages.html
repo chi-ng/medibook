@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <title> Messages </title>
+        <meta charset="windows-1252">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="messages.css">
+        <!-- navigation menu template-->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+    <style>
+      #messages {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      #messages th {
+        border: 2px solid #ddd;
+        padding: 7px; }
+
+      #messages tr {
+        padding: 7px;
+      }
+
+      #messages tr:nth-child(even){background-color: #f2f2f2;}
+
+      #messages tr:hover {background-color: #ddd;}
+
+      #messages th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #CAE8F0;
+        color: black;
+      }
+    </style>
+    </header>
+    <body>
+        <div class="container">
+            <div class="box-screen">
+                <!-- logo -->
+                <div class="logo">
+                    <a href="homepage.html"> <img src="logo.png"> </a>
+                </div>
+
+
+                <!--navigation menu -->
+                <div class="w3-bar w3-light-grey">
+                    <a href="homepage.html" class="w3-bar-item w3-button"> Home </a>
+                    <a href="logout.php" class="w3-bar-item w3-button" style="float: right"> Log out </a>
+                </div>
+            </div>
+<br>
+            <!-- manage Messages info -->
+            <div class="body">
+                <h1> Recent Messages</h1>
+
+                <!-- manage Messages table -->
+                <table id="messages">
+                        <tr>
+                          <th>Date</th>
+                          <th>Time</th>
+                          <th>From</th>
+                          <th>Message</th>
+                        </tr>
+                        <tr>
+                          <td> Monday 14-03-2019</td>
+                          <td> 3:49pm </td>
+                          <td> Dr Mike Hall </td>
+                          <td> Next appointment booked every 2 weeks</td>
+
+                        </tr>
+                        <tr>
+                          <td> Monday 23-03-2019  </td>
+                          <td> 2:00pm </td>
+                          <td> Dr Anna Glinka </td>
+                          <td> Prescription given, seeing patient next week </td>
+                        </tr>
+                        <tr>
+                          <td> Monday 8-05-2019 </td>
+                          <td> 11:30am  </td>
+                          <td> Dr Joshua Walsh </td>
+                          <td> Done treatment </td>
+                        </tr>
+
+                      </table>
+            </div>
+        </div>
+    </body>
+
+
+
+
+    <footer>
+
+
+    </footer>
+</html>

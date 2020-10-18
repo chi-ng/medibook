@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+}
+
+*:focus {
+	outline: none;
+}
+
+body {
+    font-family: Arial;
+    /* the background image used */
+    background-image: url("image/background.png");
+    /* center and scale the image */
+    /* background-position: center; */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* set the size of the container */
+.container {
+    margin: 10px auto;
+    width: 1000px;
+}
+
+/* logo image size and border */
+.logo img {
+    width: 300px;
+    height: 300px;
+    border-radius: 200px;
+}
+
+.box-screen{
+    background-color:	#CAE8F0;
+    /* border to be slightly round */
+    border-radius: 5px;
+    /* text setting */
+    font-size: 16px;
+    font-family: Arial;
+    color: #444;
+}
+
+.body{
+    background-color: #FFF;
+    /* border to be slightly round */
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: Arial;
+    color: #444;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+
+.column {
+    float: left;
+    width: 33%;
+    padding: 50px;
+  }
+
+.column img{
+    width:30%;
+    /* margin between img and figcaption*/
+    margin: 30px;
+}
+
+figcaption{
+    text-align: center;
+    font-size: 16px;
+    font-family: Arial;
+    color: #444;
+}
+
+.body{
+    padding: 50px;
+}
